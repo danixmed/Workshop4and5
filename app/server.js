@@ -14,7 +14,6 @@ function emulateServerReturn(data, cb) {
  * Given a feed item ID, returns a FeedItem object with references resolved.
  * Internal to the server, since it's synchronous.
  */
- 
 function getFeedItemSync(feedItemId) {
 var feedItem = readDocument('feedItems', feedItemId); // Resolve 'like' counter.
 feedItem.likeCounter =

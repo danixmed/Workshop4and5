@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 var initialData = {
   // The "user" collection. Contains all of the users in our Facebook system. "users": {
     // This user has id "1".
-    "1": {
+    "users":{
+      "1": {
       "_id": 1,
       "fullName": "Someone",
       "feed": 1
@@ -20,8 +21,9 @@ var initialData = {
     // This is "you"!
 "4": {
 "_id": 4,
-"fullName": "John Vilk", // ID of your feed. "feed": 4
-} },
+"fullName": "John Vilk", // ID of your feed.
+"feed": 4
+} } ,
 // The 'feedItems' collection. Contains all of the feed items on our Facebook // system.
 "feedItems": {
 "1": {

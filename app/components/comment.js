@@ -1,14 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router';
 import {unixTimeToString} from '../util';
 export default class Comment extends React.Component {
   render() {
     return ( <div>
       <div className="media-left media-top">
-      PIC
+        PIC
       </div>
       <div className="media-body">
-      <a href="#">{this.props.author.fullName}</a> {this.props.children} <br /><a href="#">Like</a> · <a href="#">Reply</a> ·
-      {unixTimeToString(this.props.postDate)} </div>
-      </div> )
-    }
+        <Link to={"/profile/" + this.props.author._id}>
+          {this.props.author.fullName}
+        </Link>
+        {this.props.children} <br /><a href="#">Like</a> · <a href="#">Reply</a> ·
+        {unixTimeToString(this.props.postDate)} </div>
+    </div> )
   }
+}
